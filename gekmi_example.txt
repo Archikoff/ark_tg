@@ -1,0 +1,16 @@
+from telegram.ext import Updater, CommandHandler
+from token import *
+ 
+def shit(update, context):
+    context.bot.send_message(chat_id=update.effective_chat.id,
+                             text="You got shit")
+ 
+token = token.token
+ 
+updater = Updater(token=token, use_context=True)
+dispatcher = updater.dispatcher
+ 
+shit_handler = CommandHandler('shit', shit)
+dispatcher.add_handler(shit_handler)
+ 
+updater.start_polling()
