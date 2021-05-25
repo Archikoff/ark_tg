@@ -1,2 +1,6 @@
 .venv
 token.txt
+.pyc
+tg_bot_conf.py
+launch.json
+settings.json
